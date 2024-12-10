@@ -75,11 +75,6 @@ Este programa utiliza a **plataforma Wokwi** e o **ESP32 com o framework Arduino
 | **Botão Parada**      | GPIO 25           |
 | **LED Ring**          | GPIO 33           |
 
-### 📂 **Arquivos do Programa**
-- **`/Programa1/codigo.ino`**: Código fonte do programa com comentários explicativos.
-- **`/Programa1/imagens/`**: Prints do Wokwi, exibição no OLED e detalhes de funcionamento.
-- **`/Programa1/README.md`**: Explicação detalhada do Programa 1, incluindo o funcionamento do controle do servo, do display OLED e do LED Ring.
-
 ---
 
 
