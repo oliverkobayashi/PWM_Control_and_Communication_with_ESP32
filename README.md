@@ -16,7 +16,7 @@ Cada programa está organizado em uma **pasta individual**, onde estão disponib
 > **Local:** `/Programa1/`
 
 Este programa utiliza a **plataforma Wokwi** e o **ESP32 com o framework Arduino IDE** para o controle de um **servo motor** e um **display OLED**. Os componentes foram interligados e controlados conforme o seguinte esquema de funcionamento:
-![Texto Alternativo](Programa1/Projeto1_Demo.png)
+![Texto Alternativo](Programa1/Projeto1_Demo.PNG)
 
 **Requisitos Implementados:**
 - **Modo Automático**: O servo se move de 0° a 180° e volta para 0° de forma contínua, com um delay de 1 segundo nas posições de 0° e 180°.
