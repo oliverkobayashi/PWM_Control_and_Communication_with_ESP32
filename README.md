@@ -107,7 +107,3 @@ O objetivo deste programa é controlar um **LED RGB** por meio de **modulação 
 - [Documentação da biblioteca Adafruit SSD1306](https://learn.adafruit.com/monochrome-oled-breakouts/overview)
 - [Documentação ESP32Servo](https://github.com/PaulStoffregen/Servo)
 - [Documentação do ESP-IDF](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
-
----
-
-Com esta organização, os arquivos ficam bem estruturados e cada programa tem sua própria pasta com explicações e arquivos necessários. Se precisar de ajustes no README ou mais detalhes, estou à disposição! 🚀
