@@ -3,10 +3,8 @@
 Este repositório contém a implementação de soluções práticas de controle PWM e comunicação serial utilizando o ESP32. O objetivo principal é desenvolver e documentar dois programas principais, cada um com requisitos e objetivos específicos, de forma a atender aos critérios de um projeto final de microcontroladores.
 
 Cada programa está organizado em uma **pasta individual**, onde estão disponibilizados os seguintes itens:
-- **Código fonte** (arquivo `.ino` ou equivalente)
-- **Diagramas e esquemas** de ligação dos componentes
+- **Código fonte** (arquivo `.ino`)
 - **Imagens e prints** das simulações e testes realizados
-- **Explicações detalhadas** do funcionamento de cada parte do código e das decisões de design.
 
 ---
 
