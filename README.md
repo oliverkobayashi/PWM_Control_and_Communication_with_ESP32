@@ -10,12 +10,6 @@ Cada programa está organizado em uma **pasta individual**, onde estão disponib
 
 ---
 
-## 📁 **Estrutura do Repositório**
-├── README.md # Descrição geral do repositório ├── Programa_1 # Pasta do primeiro programa │ ├── README.md # Explicações e detalhes sobre o Programa 1 │ ├── codigo.ino # Código fonte do controle do servo e OLED │ └── imagens # Imagens e prints do projeto no Wokwi │ ├── Programa_2 # Pasta do segundo programa │ ├── README.md # Explicações e detalhes sobre o Programa 2 │ ├── main.c # Código fonte do controle do LED RGB │ └── imagens # Imagens e prints do projeto no Wokwi │ └── Projeto_4_Final_PWM_Serial_ESP32.pdf # Documento original com as instruções
-
-
----
-
 ## 📘 **Descrição dos Programas**
 
 ### 🔥 **Programa 1 - Controle do Servo Motor com Display OLED**
