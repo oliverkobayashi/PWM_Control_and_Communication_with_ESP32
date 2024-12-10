@@ -18,9 +18,7 @@ Cada programa está organizado em uma **pasta individual**, onde estão disponib
 Este programa utiliza a **plataforma Wokwi** e o **ESP32 com o framework Arduino IDE** para o controle de um **servo motor**, um **display OLED** e um **LED Ring Adafruit**. O objetivo é permitir o controle manual e automático do servo, além de indicar o ângulo do servo por meio de um **LED correspondente no LED Ring** e exibir informações no **display OLED**.
 
 **🖥️ Demonstração do Projeto 1:**
-> ![Demonstração do Projeto 1](Programa1/imagens/Projeto1_Demo.PNG)
-
----
+> ![Demonstração do Projeto 1](Programa1/Projeto1_Demo.PNG)
 
 ### 🧾 **Requisitos Implementados**
 - **⚙️ Modo Automático**: 
@@ -58,16 +56,12 @@ Este programa utiliza a **plataforma Wokwi** e o **ESP32 com o framework Arduino
     - **LED 8**: 161° a 180°
   - Apenas o LED correspondente ao intervalo de ângulo é aceso.
 
----
-
 ### ⚙️ **Componentes Utilizados**
 - **Servo Motor**: Controlado via PWM com a biblioteca **ESP32Servo**.
 - **Display OLED**: Comunicação via I2C com as bibliotecas **Adafruit GFX** e **Adafruit SSD1306**.
 - **Potenciômetro**: Conectado ao GPIO **34** para controle manual.
 - **Botões**: Conectados aos GPIOs **25, 26 e 27** para controle dos modos de operação.
 - **LED Ring Adafruit**: LEDs que acendem conforme o ângulo do servo, com controle de cor e intensidade via a biblioteca **Adafruit NeoPixel**.
-
----
 
 ### 🛠️ **Conexões Físicas**
 | **Componente**         | **Pino do ESP32** |
@@ -80,8 +74,6 @@ Este programa utiliza a **plataforma Wokwi** e o **ESP32 com o framework Arduino
 | **Botão Manual**      | GPIO 26           |
 | **Botão Parada**      | GPIO 25           |
 | **LED Ring**          | GPIO 33           |
-
----
 
 ### 📂 **Arquivos do Programa**
 - **`/Programa1/codigo.ino`**: Código fonte do programa com comentários explicativos.
