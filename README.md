@@ -12,43 +12,84 @@ Cada programa está organizado em uma **pasta individual**, onde estão disponib
 
 ## 📘 **Descrição dos Programas**
 
-### 🔥 **Programa 1 - Controle do Servo Motor com Display OLED**
+### 🔥 **Programa 1 - Controle do Servo Motor com Display OLED e LED Ring**
 > **Local:** `/Programa1/`
 
-Este programa utiliza a **plataforma Wokwi** e o **ESP32 com o framework Arduino IDE** para o controle de um **servo motor** e um **display OLED**. Os componentes foram interligados e controlados conforme o seguinte esquema de funcionamento:
-![Texto Alternativo](Programa1/Projeto1_Demo.PNG)
+Este programa utiliza a **plataforma Wokwi** e o **ESP32 com o framework Arduino IDE** para o controle de um **servo motor**, um **display OLED** e um **LED Ring Adafruit**. O objetivo é permitir o controle manual e automático do servo, além de indicar o ângulo do servo por meio de um **LED correspondente no LED Ring** e exibir informações no **display OLED**.
 
-**Requisitos Implementados:**
-- **Modo Automático**: O servo se move de 0° a 180° e volta para 0° de forma contínua, com um delay de 1 segundo nas posições de 0° e 180°.
-- **Modo Manual**: O servo é controlado diretamente pelo potenciômetro, permitindo o ajuste manual do ângulo.
-- **Controle via Botões**:
-  - **Botão de Loop** (GPIO 27): Ativa o modo automático.
-  - **Botão de Modo Manual** (GPIO 26): Ativa o modo manual.
-  - **Botão de Parada** (GPIO 25): Interrompe o funcionamento do servo.
-- **Exibição no Display OLED**: O display mostra o ângulo e o modo de operação atual.
-- **Controle de LED Ring Adafruit**: O LED correspondente ao ângulo do servo é ativado de acordo com o seguinte esquema:
-  - **LED 0**: 0° a 20°
-  - **LED 1**: 21° a 40°
-  - **LED 2**: 41° a 60°
-  - **LED 3**: 61° a 80°
-  - **LED 4**: 81° a 100°
-  - **LED 5**: 101° a 120°
-  - **LED 6**: 121° a 140°
-  - **LED 7**: 141° a 160°
-  - **LED 8**: 161° a 180°
-
-**Componentes Utilizados:**
-- **Servo Motor**: Controlado via PWM com a biblioteca **ESP32Servo**.
-- **Display OLED**: Comunicação via I2C com as bibliotecas **Adafruit GFX** e **Adafruit SSD1306**.
-- **Potenciômetro**: Conectado ao GPIO 34 para controle manual.
-- **Botões**: Conectados aos GPIOs 25, 26 e 27 para controle dos modos.
-- **LED Ring Adafruit**: LEDs acesos conforme o ângulo do servo.
-
-> **Arquivos disponíveis:**
-- **`/Programa_1/codigo.ino`**: Código fonte do programa com comentários explicativos.
-- **`/Programa_1/imagens/`**: Prints do Wokwi, exibição no OLED e detalhes de funcionamento.
+**🖥️ Demonstração do Projeto 1:**
+> ![Demonstração do Projeto 1](Programa1/imagens/Projeto1_Demo.PNG)
 
 ---
+
+### 🧾 **Requisitos Implementados**
+- **⚙️ Modo Automático**: 
+  - O servo se move de **0° a 180°** e volta para **0°** de forma contínua.
+  - Há um **delay de 1 segundo** nas posições de 0° e 180° antes de iniciar o movimento de retorno.
+  - O movimento se repete de forma **contínua**.
+  
+- **🎚️ Modo Manual**: 
+  - O servo é controlado diretamente pelo **potenciômetro**.
+  - O ângulo do servo é proporcional ao valor lido no potenciômetro, permitindo o ajuste manual de forma intuitiva.
+
+- **🎮 Controle via Botões**:
+  - **Botão de Loop** (GPIO 27): Ativa o modo automático.
+  - **Botão de Modo Manual** (GPIO 26): Ativa o modo manual.
+  - **Botão de Parada** (GPIO 25): Interrompe o funcionamento do servo, parando qualquer movimento.
+
+- **📟 Exibição no Display OLED**: 
+  - O display mostra o **ângulo do servo** e o **modo de operação** em tempo real.
+  - Exibição típica no OLED:
+    ```
+    Angulo: 45 graus
+    Modo: Automático
+    ```
+
+- **💡 Controle de LED Ring Adafruit**: 
+  - O **LED correspondente ao ângulo do servo** é ativado de acordo com o seguinte esquema:
+    - **LED 0**: 0° a 20°
+    - **LED 1**: 21° a 40°
+    - **LED 2**: 41° a 60°
+    - **LED 3**: 61° a 80°
+    - **LED 4**: 81° a 100°
+    - **LED 5**: 101° a 120°
+    - **LED 6**: 121° a 140°
+    - **LED 7**: 141° a 160°
+    - **LED 8**: 161° a 180°
+  - Apenas o LED correspondente ao intervalo de ângulo é aceso.
+
+---
+
+### ⚙️ **Componentes Utilizados**
+- **Servo Motor**: Controlado via PWM com a biblioteca **ESP32Servo**.
+- **Display OLED**: Comunicação via I2C com as bibliotecas **Adafruit GFX** e **Adafruit SSD1306**.
+- **Potenciômetro**: Conectado ao GPIO **34** para controle manual.
+- **Botões**: Conectados aos GPIOs **25, 26 e 27** para controle dos modos de operação.
+- **LED Ring Adafruit**: LEDs que acendem conforme o ângulo do servo, com controle de cor e intensidade via a biblioteca **Adafruit NeoPixel**.
+
+---
+
+### 🛠️ **Conexões Físicas**
+| **Componente**         | **Pino do ESP32** |
+|---------------------|------------------|
+| **Servo Motor**       | GPIO 32           |
+| **Display OLED (SDA)**| GPIO 21           |
+| **Display OLED (SCL)**| GPIO 22           |
+| **Potenciômetro**     | GPIO 34 (ADC)     |
+| **Botão Loop**        | GPIO 27           |
+| **Botão Manual**      | GPIO 26           |
+| **Botão Parada**      | GPIO 25           |
+| **LED Ring**          | GPIO 33           |
+
+---
+
+### 📂 **Arquivos do Programa**
+- **`/Programa1/codigo.ino`**: Código fonte do programa com comentários explicativos.
+- **`/Programa1/imagens/`**: Prints do Wokwi, exibição no OLED e detalhes de funcionamento.
+- **`/Programa1/README.md`**: Explicação detalhada do Programa 1, incluindo o funcionamento do controle do servo, do display OLED e do LED Ring.
+
+---
+
 
 ### 🌈 **Programa 2 - Controle de LED RGB com PWM**
 > **Local:** `/Programa_2/`
