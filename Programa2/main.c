@@ -5,19 +5,19 @@
 #include "esp_err.h"
 
 // Definição dos pinos para o LED RGB
-#define PINO_RED   25  // Pino GPIO para o LED Vermelho (R)
-#define PINO_GREEN 26  // Pino GPIO para o LED Verde (G)
-#define PINO_BLUE  27  // Pino GPIO para o LED Azul (B)
+#define PINO_RED   25                              // Pino GPIO para o LED Vermelho (R)
+#define PINO_GREEN 26                              // Pino GPIO para o LED Verde (G)
+#define PINO_BLUE  27                              // Pino GPIO para o LED Azul (B)
 
 // Configurações do LEDC (LED Control)
-#define LEDC_TIMER           LEDC_TIMER_0
-#define LEDC_MODE            LEDC_LOW_SPEED_MODE
-#define LEDC_CHANNEL_RED     LEDC_CHANNEL_0
-#define LEDC_CHANNEL_GREEN   LEDC_CHANNEL_1
-#define LEDC_CHANNEL_BLUE    LEDC_CHANNEL_2
-#define LEDC_DUTY_RES        LEDC_TIMER_8_BIT     // Resolução de 8 bits (0-255)
-#define LEDC_FREQUENCY       5000                 // Frequência de 5kHz
-#define INCREMENTO           5                    // Incremento do duty cycle
+#define LEDC_TIMER           LEDC_TIMER_0           // Timer usado para o controle do PWM
+#define LEDC_MODE            LEDC_LOW_SPEED_MODE    // Modo de velocidade baixa
+#define LEDC_CHANNEL_RED     LEDC_CHANNEL_0         // Define o canal vermelho
+#define LEDC_CHANNEL_GREEN   LEDC_CHANNEL_1         // Define o canal verde
+#define LEDC_CHANNEL_BLUE    LEDC_CHANNEL_2         // Define o canal azul
+#define LEDC_DUTY_RES        LEDC_TIMER_8_BIT       // Resolução de 8 bits (0-255)
+#define LEDC_FREQUENCY       5000                   // Frequência de 5kHz
+#define INCREMENTO           5                      // Incremento do duty cycle
 
 // Função para configurar o canal de PWM
 void configurar_pwm(ledc_channel_config_t *channel_config, int gpio_num, int channel) {
