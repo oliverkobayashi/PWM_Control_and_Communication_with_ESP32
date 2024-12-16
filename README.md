@@ -240,7 +240,7 @@ void app_main(void) {
 ```
 Por fim, é realizada a configuração do temporizador do LEDC, que define a resolução do duty cycle, a frequência do PWM, e o modo de operação. Essa configuração é necessária antes de inicializar os canais PWM.
 
-A função principal cria uma tarefa **FreeRTOS*** para o controle de PWM, permitindo que o código que ajusta os LEDs RGB seja executado em uma thread separada em `xTaskCreate`. A tarefa é criada com uma pilha de **2048 bytes** e prioridade baixa (1).
+A função principal cria uma tarefa **FreeRTOS** para o controle de PWM, permitindo que o código que ajusta os LEDs RGB seja executado em uma thread separada em `xTaskCreate`. A tarefa é criada com uma pilha de **2048 bytes** e prioridade baixa (1).
 
 ---
 
